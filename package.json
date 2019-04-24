@@ -1,0 +1,21 @@
+{
+  "name": "tcl-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/theculinarylounge/tcl-website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/theculinarylounge/tcl-website#readme",
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "grunt-contrib-imagemin": "^3.1.0",
+    "imagemin-mozjpeg": "^8.0.0"
+  }
+}

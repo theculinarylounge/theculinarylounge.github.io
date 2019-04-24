@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Booking</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link href="/assets/css/custom.css" rel="stylesheet">
+    <link href="/assets/scss/custom.css" rel="stylesheet">
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            height: 100%;
+            min-height: 100vh;
+            /*overflow: hidden;*/
+        }
+
+        .btn:not(:disabled):not(.disabled).active {
+            background-color: #85FF92;
+            border-color: #21C932;
+            color: #000000;
+        }
+
+        .btn {
+            border-radius: 0;
+        }
+
+        .mega-card {
+            padding: 0 140px;
+            color: white;
+            background: linear-gradient(
+                    rgba(0, 0, 0, 0.29),
+                    rgba(0, 0, 0, 0.29)
+            ), url("/assets/img/DSC8878.png") bottom no-repeat;
+            background-size: 100%;
+        }
+
+        .about-mega-card {
+            padding: 0 140px;
+            color: white;
+            background: linear-gradient(
+                    rgba(0, 0, 0, 0.29),
+                    rgba(0, 0, 0, 0.29)
+            ), url("/assets/img/3W4A9315.png") bottom no-repeat;
+            background-size: 100%;
+        }
+
+        .cco-mega-card {
+            padding: 0 140px;
+            color: white;
+            background: linear-gradient(
+                    rgba(0, 0, 0, 0.29),
+                    rgba(0, 0, 0, 0.29)
+            ), url("/assets/img/DSC8947.png") bottom no-repeat;
+            background-size: 100%;
+        }
+
+        .kbp-mega-card {
+            padding: 0 140px;
+            color: white;
+            background: linear-gradient(
+                    rgba(0, 0, 0, 0.29),
+                    rgba(0, 0, 0, 0.29)
+            ), url("/assets/img/pd-1920x1080.png") bottom no-repeat;
+            background-size: 100%;
+        }
+
+        .cae-mega-card {
+            padding: 0 140px;
+            color: white;
+            background: linear-gradient(
+                    rgba(0, 0, 0, 0.29),
+                    rgba(0, 0, 0, 0.29)
+            ), url("/assets/img/A56A1746.png") bottom no-repeat;
+            background-size: 100%;
+        }
+
+        .our-stories-mega-card {
+            padding: 0 140px;
+            color: white;
+            background: linear-gradient(
+                    rgba(0, 0, 0, 0.29),
+                    rgba(0, 0, 0, 0.29)
+            ), url("/assets/img/A11I5307.png") bottom no-repeat;
+            background-size: 100%;
+        }
+
+        .choose-us-card-1 {
+            color: white;
+            background: url("/assets/img/3W4A9289.png") bottom;
+        }
+
+        .choose-us-card-2 {
+            color: white;
+            background: url("/assets/img/BCC4836.png") bottom;
+        }
+
+        .choose-us-card-3 {
+            color: white;
+            background: url("/assets/img/DSC7904.png") bottom;
+        }
+
+        .card-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .client-card {
+            width: 184px;
+            height: 132px;
+            overflow: hidden;
+            background: white center;
+            margin: 10px 20px 10px 0;
+        }
+
+        .partner-card {
+            width: 260px;
+            height: 132px;
+            overflow: hidden;
+            background: white center;
+            margin: 10px 16px 10px 0;
+        }
+
+        li.nav-item {
+            margin: 0 10px;
+        }
+
+        .navbar-nav .nav-link {
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        nav.header .navbar-nav .active > .nav-link {
+            color: #EF4541;
+        }
+
+        nav.sub-header .navbar-nav .active > .nav-link {
+            color: black;
+            background: #EAEAEA;
+            font-weight: bold;
+            border-radius: 15px;
+        }
+
+        .black-29 {
+            background-color: rgba(0, 0, 0, 0.29);
+        }
+
+
+    </style>
+</head>
+<body class="bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-white header sticky-top overflow-hidden">
+    <div class="main-container text-left">
+        <a class="navbar-brand position-absolute" href="/">
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <img src="/assets/img/tcl_logo_color.png" alt="" class="d-inline-block align-top" width="69px" height="69px">
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" style="outline: none">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <a class="btn btn-success p-2 ml-auto" href="/contact-us.html">CONTACT US</a>
+        </div>
+    </div>
+</nav>
+<div class="container-fluid h-100">
+    <div class="row h-100" style="padding: 60px 0 0 0;">
+    <div class="main-container">
+        <div class="col-md-10 card mx-auto">
+            <div class="card-body">
+                <div id="step1" class="">
+                    <div class="text-center jumbo-text">Select a service</div>
+                    <div class="text-center jumbo-sub-text">Please select the service you are looking for.</div>
+                    <div class="btn-group px-3 d-block py-5 btn-group-toggle d-flex flex-wrap" data-toggle="buttons"
+                         role="group">
+                        <label class="btn btn-light btn-block col-xl-3 col-lg-4">
+                            <input type="radio" name="options" id="option1" autocomplete="off"
+                                   class="f-14 font-weight-medium"> Corporate Cook-off
+                        </label>
+                        <label class="btn btn-light btn-block col-xl-3 col-lg-4">
+                            <input type="radio" name="options" id="option2" autocomplete="off"
+                                   class="f-14 font-weight-medium">Kid's
+                            Birthday Party
+                        </label>
+
+                        <label class="btn btn-light btn-block col-xl-3 col-lg-4">
+                            <input type="radio" name="options" id="option3" autocomplete="off"
+                                   class="f-14 font-weight-medium">Private Dining
+                        </label>
+
+                        <label class="btn btn-light btn-block col-xl-3 col-lg-4 flex-wrap">
+                            <input type="radio" name="options" id="option4" autocomplete="off"
+                                   class="f-14 font-weight-medium">Culinary Art's
+                        </label>
+
+                        <label class="btn btn-light btn-block col-xl-3 col-lg-4">
+                            <input type="radio" name="options" id="option5" autocomplete="off"
+                                   class="f-14 font-weight-medium">Rent Our Studio
+                        </label>
+                    </div>
+                    <div class="d-flex justify-content-lg-end justify-content-center">
+                        <button class="btn btn-tcl-warning" id="step1_submit">PROCEED</button>
+                    </div>
+                </div>
+                <div id="step2_1" class="d-none">
+                    <div class="text-center jumbo-text">You chose Cook-off</div>
+                    <div class="text-center jumbo-sub-text">"Our Cook-offs bring Teams Together</div>
+                    <!--<div class="form-group col-lg-5 col-12 p-0 pt-3">-->
+                    <!--<label for="cookTheme" class="f-14 font-weight-medium">Select a theme for cook-off</label>-->
+                    <!--<select class="form-control" id="cookTheme">-->
+                    <!--<option>1</option>-->
+                    <!--<option>2</option>-->
+                    <!--<option>3</option>-->
+                    <!--<option>4</option>-->
+                    <!--<option>5</option>-->
+                    <!--</select>-->
+                    <!--</div>-->
+                    <div class="form-group col-lg-5 col-12 p-0">
+                        <label for="selDate" class="font-weight-medium f-14">Select a date</label>
+                        <!--<select class="form-control" id="selDate">-->
+                        <!--<option>1</option>-->
+                        <!--<option>2</option>-->
+                        <!--<option>3</option>-->
+                        <!--<option>4</option>-->
+                        <!--<option>5</option>-->
+                        <!--</select>-->
+                        <input type="text" id="cookoff-datepicker" class="form-control datepicker">
+                    </div>
+                    <div class="form-group">
+
+
+
+                        <label for="timeSlot1" class="font-weight-medium f-14">Select a slot</label>
+                        <p class="text-muted">(The availability of the slot will be confirmed to you later by TCL
+                            team.)</p>
+                        <div class="btn-group d-block pb-5 btn-group-toggle" data-toggle="buttons" role="group"
+                             id="timeSlot1">
+                            <label class="btn btn-light">
+
+                                <input type="radio" name="options" id="slot1" autocomplete="off" value=" 11am-2pm"
+                                       class="font-weight-medium f-14"> 11am-2pm
+                            </label>
+                            <label class="btn btn-light">
+                                <input type="radio" name="options" id="slot2" autocomplete="off" value="4pm-7pm"
+                                       class="font-weight-medium f-14">4pm-7pm
+                            </label>
+                            <label class="btn btn-light">
+                                <input type="radio" name="options" id="slot3" autocomplete="off" value="7pm-10pm"
+                                       class="font-weight-medium f-14">7pm-10pm
+                             </label>
+                            <label class="btn btn-light">
+                                <input type="radio" name="options" id="slot4" autocomplete="off" value="Custom Slot"
+                                       class="font-weight-medium f-14">Custom Slot
+                            </label>
+                        </div>
+                    </div>
+                    <button class="btn btn-tcl-warning float-right" id="step2_1_submit">PROCEED</button>
+                    <button class="btn btn-link float-right text-dark" id="step2_1_prev">GO BACK</button>
+                </div>
+                <div id="step2_2" class="d-none">
+                    <div class="text-center jumbo-text">Kid's Birthday Party</div>
+                    <div class="text-center jumbo-sub-text">'Unlimited fun through Cooking'</div>
+                    <div class="form-group col-lg-5 col-12 p-0 pt-3">
+                        <label for="selectDate" class="font-weight-medium f-14">Select a date</label>
+                        <input type="text" id="kids-datepicker" class="form-control datepicker">
+
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="timeSlot2" class="font-weight-medium f-14">Select a slot</label>
+                        <p class="text-muted">(The availability of the slot will be confirmed to you later by TCL
+                            team.)</p>
+                        <div class="btn-group d-block pb-5 btn-group-toggle" data-toggle="buttons" role="group"
+                             id="timeSlot2">
+                            <label class="btn btn-light">
+                                <input type="radio" name="options" id="slot2_1" autocomplete="off"
+                                       class="font-weight-medium f-14">10am-1pm
+                            </label>
+                            <label class="btn btn-light">
+                                <input type="radio" name="options" id="slot2_2" autocomplete="off"
+                                       class="font-weight-medium f-14">4pm-7pm
+                            </label>
+                            <label class="btn btn-light">
+                                <input type="radio" name="options" id="slot2_3" autocomplete="off"
+                                       class="font-weight-medium f-14">5pm-8pm
+                            </label>
+                            <label class="btn btn-light">
+                                <input type="radio" name="options" id="slot2_4" autocomplete="off"
+                                       class="font-weight-medium f-14">Custom Slot
+                            </label>
+                        </div>
+                    </div>
+                    <button class="btn btn-tcl-warning float-right" id="step2_2_submit">PROCEED</button>
+                    <button class="btn btn-link float-right text-dark" id="step2_2_prev">GO BACK</button>
+                </div>
+                <div id="step2_3" class="d-none">
+                    <div class="text-center jumbo-text">You chose Personalised Private Dining</div>
+                    <div class="text-center jumbo-sub-text">"The Ideal Place for Experiential Dining"
+                    </div>
+                    <!--<div class="form-group col-lg-5 col-12 p-0 pt-3">-->
+                    <!--<label for="diningTheme" class="font-weight-medium f-14">Select dining theme</label>-->
+                    <!--<select class="form-control" id="diningTheme">-->
+                    <!--<option>1</option>-->
+                    <!--<option>2</option>-->
+                    <!--<option>3</option>-->
+                    <!--<option>4</option>-->
+                    <!--<option>5</option>-->
+                    <!--</select>-->
+                    <!--</div>-->
+
+                    <div class="form-group col-lg-5 col-12 p-0">
+                        <label for="selDate1" class="font-weight-medium f-14">Select a date</label>
+                        <input type="text" id="private-datepicker" class="form-control datepicker">
+
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="timeSlot" class="font-weight-medium f-14">Select a slot</label>
+                        <p class="text-muted">(The availability of the slot will be confirmed to you later by TCL
+                            team.)</p>
+                        <div class="btn-group d-block pb-5 btn-group-toggle" data-toggle="buttons" role="group"
+                             id="timeSlot">
+                            <label class="btn btn-light">
+                                <input type="radio" name="options" id="slot3_1" autocomplete="off"
+                                       class="font-weight-medium f-14">12noon-3pm
+                            </label>
+                            <label class="btn btn-light">
+                                <input type="radio" name="options" id="slot3_2" autocomplete="off"
+                                       class="font-weight-medium f-14"> 7pm-10pm
+                            </label>
+                            <label class="btn btn-light">
+                                <input type="radio" name="options" id="slot3_3" autocomplete="off"
+                                       class="font-weight-medium f-14">8pm-11pm
+                            </label>
+                            <label class="btn btn-light">
+                                <input type="radio" name="options" id="slot3_4" autocomplete="off"
+                                       class="font-weight-medium f-14">Custom Slot
+                            </label>
+                        </div>
+                    </div>
+                    <button class="btn btn-tcl-warning float-right" id="step2_3_submit">PROCEED</button>
+                    <button class="btn btn-link float-right text-dark" id="step2_3_prev">GO BACK</button>
+                </div>
+                <div id="step2_4" class="d-none">
+                    <div class="text-center jumbo-text">You chose Culinary Arts</div>
+                    <div class="text-center jumbo-sub-text">"Giving your passion an expression"
+                    </div>
+                    <!--<a class="btn btn-link d-flex text-center align-items-center justify-content-center f-14" href="#">Learn-->
+                    <!--more-->
+                    <!--about our course structure</a>-->
+                    <div class="form-group pt-3 col-lg-6 col-12 mx-auto">
+                        <label for="classSlot" class="font-weight-medium f-14">Class</label>
+                        <!--<p class="text-muted">(The availability of the slot will be confirmed to you later by TCL-->
+                        <!--team.)</p>-->
+                        <div class="btn-group d-block pb-5 btn-group-toggle" data-toggle="buttons" role="group"
+                             id="classSlot">
+                            <label class="btn btn-light">
+                                <input type="radio" name="options" id="slot4_1" autocomplete="off"
+                                       class="font-weight-medium f-14">Kids(Less than 15
+                                years)
+                            </label>
+                            <label class="btn btn-light">
+                                <input type="radio" name="options" id="slot4_2" autocomplete="off"
+                                       class="font-weight-medium f-14">Beginner classes
+                            </label>
+                            <label class="btn btn-light">
+                                <input type="radio" name="options" id="slot4_3" autocomplete="off"
+                                       class="font-weight-medium f-14">Advanced classes
+                            </label>
+                        </div>
+                    </div>
+                    <button class="btn btn-tcl-warning float-right" id="step2_4_submit">PROCEED</button>
+                    <button class="btn btn-link float-right text-dark" id="step2_4_prev">GO BACK</button>
+                </div>
+                <div id="step2_5" class="d-none">
+                    <div class="text-center jumbo-text">Rent Our Studio</div>
+                    <div class="text-center jumbo-sub-text"></div>
+                    <div class="form-group col-lg-5 col-12 p-0 pt-3 mx-auto">
+                        <label for="hoursTheme" class="font-weight-medium f-14">Please select number of Hours
+                            required</label>
+                        <select class="form-control" id="hoursTheme">
+                            <option>0 - 3 Hours</option>
+                            <option>3 - 6 Hours</option>
+                            <option>Full day(8 Hours)</option>
+
+                        </select>
+                    </div>
+                    <div class="form-group col-lg-5 col-12 p-0 mx-auto">
+                        <label for="requirement" class="font-weight-medium f-14">Please tell us more details of your
+                            requirement.</label>
+                        <textarea class="form-control" id="requirement" rows="3"></textarea>
+                    </div>
+                    <button class="btn btn-tcl-warning float-right" id="step2_5_submit">PROCEED</button>
+                    <button class="btn btn-link float-right text-dark" id="step2_5_prev">GO BACK</button>
+                </div>
+                <div id="step3" class="d-none">
+                    <div class="text-center jumbo-text">Contact details</div>
+                    <div class="text-center jumbo-sub-text">We will confirm the availability for the slot selected.
+                        Please
+                        enter
+                        your contact details.
+                    </div>
+                    <div class="form-group col-lg-5 col-12 p-0 pt-3 mx-auto">
+                        <label for="name" class="font-weight-medium f-14">Name</label>
+                        <input class="form-control" id="name" required type="text">
+                    </div>
+                    <div class="form-group col-lg-5 col-12 p-0 mx-auto">
+                        <label for="phone" class="font-weight-medium f-14">Phone Number</label>
+                        <input class="form-control" id="phone" required  type="text">
+                    </div>
+                    <div class="form-group col-lg-5 col-12 p-0 mx-auto">
+                        <label for="email" class="font-weight-medium f-14">Email address</label>
+                        <input type="email" class="form-control" required id="email" placeholder="name@example.com">
+                    </div>
+                    <button class="btn btn-tcl-warning float-right" id="step3_submit">PROCEED</button>
+                    <button class="btn btn-link float-right text-dark" id="step3_prev">GO BACK</button>
+                </div>
+                <div id="step4" class="align-items-center justify-content-center d-none h-100">
+                    <div class="container">
+                        <p class="lead text-center f-14">We have received your request.<br> We will get back to you on
+                            confirmation and
+                            quotation.</p>
+                        <a href="/"><button class="btn btn-tcl-warning d-flex mx-auto">GO HOME</button></a>
+                    </div>
+                </div>
+            </div>
+            <input type="hidden" id="selected-service-option">
+        </div>
+        <a class="btn btn-link text-center mx-auto align-items-center justify-content-center d-flex f-14 text-dark"
+           href="/our-services/corporate-cook-offs.html"><u>Learn
+            more
+            about our services</u></a>
+    </div>
+</div>
+
+<script src="/assets/js/booking.js"></script>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>
