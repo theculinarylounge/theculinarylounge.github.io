@@ -9,7 +9,7 @@ $(document).ready(function () {
         message.phone = $("#contact-sender-phone").val();
         message.option = $("#fieldSelect").val();
         message.message = $("#contact-sender-message").val();
-        var API_HOST = "http://localhost:8000"
+        var API_HOST = "http://localhost:8002"
         $.post(API_HOST + "/api/contact",
             message,
             function (data, status) {
