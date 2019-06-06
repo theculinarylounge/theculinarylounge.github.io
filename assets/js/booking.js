@@ -4,7 +4,7 @@
 
 $(document).ready(function () {
 
-
+ $("#booking-message").hide();
     var STEP_ID_SEQUENCE = [];
     const STEP_MAPPING = {
         'option1': 'step2_1',
@@ -52,8 +52,15 @@ $(document).ready(function () {
         message.name = document.getElementById('name').value;
         message.phone = document.getElementById('phone').value;
         message.email = document.getElementById('email').value;
-        message.email = document.getElementById('email').value;
         message.service_type = service_type;
+
+        $("#booking-message").hide();
+        if (message.name === null || message.name === "" || message.phone === null || message.phone === "" || message.email === null || message.email === "") {
+            $("#booking-message").show();
+            $("#booking-message p ").html("Name, Phone and Email are mandatory");
+            return
+        }
+
         console.log("message", message);
         if (option === "option1") {
             message.date = document.getElementById('cookoff-datepicker').value;

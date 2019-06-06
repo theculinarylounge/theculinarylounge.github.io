@@ -41,46 +41,66 @@ $(document).ready(function () {
 
     $("#subscribe-newsletter").click(function () {
         var email = $("#subscriber-email").val();
+        var igree = $("#homepage-i-agree").is(':checked');
+        $("#news-letter-message").hide();
 
+        console.log(igree);
+        if (igree === false) {
+            $("#news-letter-message").show();
 
-        $.ajax({
-            type: "POST",
-            url: API_HOST + "/api/subscriber",
-            data: "email=" + email,
-            success: function (msg) {
-                $("#news-letter-message").show();
-                $("#news-letter-message p ").html("Thank You for subscribing to our Digital Magazine");
+            $("#news-letter-message p ").html("You should agree that you want to receive emails from us.");
 
-            },
-            error: function (XMLHttpRequest, textStatus, errorThrown) {
-                console.log(textStatus, errorThrown)
-                $("#news-letter-message").show();
-                $("#news-letter-message p ").html("You are already subscribed to our mailing list.");
+        }
+        else {
+            $.ajax({
+                type: "POST",
+                url: API_HOST + "/api/subscriber",
+                data: "email=" + email,
+                success: function (msg) {
+                    $("#news-letter-message").show();
+                    $("#news-letter-message p ").html("Thank You for subscribing to our Digital Magazine");
 
-            }
-        });
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    console.log(textStatus, errorThrown)
+                    $("#news-letter-message").show();
+                    $("#news-letter-message p ").html("You are already subscribed to our mailing list.");
+
+                }
+            });
+        }
     });
 
     $(".news-letter-mobile #subscribe-newsletter-mobile").click(function () {
         var email = $("#subscriber-email-mobile").val();
+        var igree = $("#homepage-i-agree-mobile").is(':checked');
+        $("#news-letter-message-mobile").hide();
 
 
-        $.ajax({
-            type: "POST",
-            url: API_HOST + "/api/subscriber",
-            data: "email=" + email,
-            success: function (msg) {
-                $("#news-letter-message-mobile").show();
-                $("#news-letter-message-mobile p ").html("Thank You for subscribing to our Digital Magazine");
+        if (igree === false) {
+            $("#news-letter-message-mobile").show();
 
-            },
-            error: function (XMLHttpRequest, textStatus, errorThrown) {
-                console.log(textStatus, errorThrown);
-                $("#news-letter-message-mobile").show();
-                $("#news-letter-message-mobile p ").html("You are already subscribed to our mailing list.");
+            $("#news-letter-message-mobile p").html("You should agree that you want to receive emails from us.");
 
-            }
-        });
+        }
+        else {
+            $.ajax({
+                type: "POST",
+                url: API_HOST + "/api/subscriber",
+                data: "email=" + email,
+                success: function (msg) {
+                    $("#news-letter-message-mobile").show();
+                    $("#news-letter-message-mobile p ").html("Thank You for subscribing to our Digital Magazine");
+
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    console.log(textStatus, errorThrown);
+                    $("#news-letter-message-mobile").show();
+                    $("#news-letter-message-mobile p ").html("You are already subscribed to our mailing list.");
+
+                }
+            });
+        }
     });
 
     // $("#send-contact-message").click(function () {
