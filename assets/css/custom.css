@@ -221,7 +221,7 @@ a {
 }
 
 .mega-card {
-    min-height: 65vh;
+    min-height: calc(100vh - 75px);;
     color: white;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -800,7 +800,7 @@ No media query since this is the default in Bootstrap */
 
     .news-letter {
         position: absolute;
-        bottom: -12%;
+        bottom: 5%;
         right: 0;
         color: black;
         width: 325px;
@@ -823,7 +823,7 @@ No media query since this is the default in Bootstrap */
 
     .news-letter {
         position: absolute;
-        bottom: -12%;
+        bottom: 5%;
         right: 0;
         color: black;
         width: 325px;
