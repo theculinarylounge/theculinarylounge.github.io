@@ -36,7 +36,7 @@ $(document).ready(function () {
     $('#btn-news-letter-close').click(closeNewsLetter);
 
 
-    var API_HOST = "https://tcl-newsletter-backend-service.herokuapp.com";
+    var API_HOST = "http://localhost:8002";
 
 
     $("#subscribe-newsletter").click(function () {
